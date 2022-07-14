@@ -1,0 +1,50 @@
+:root {
+    /*color*/
+    --text-color: #fff;
+    --text-color-alt: #a1a1a6;
+    --accent-color: #0071e3;
+    --accent-color-alt: #2997ff;
+    --body-bg: #000;
+    --bg-color: #151516;
+    --bg-color-alt: #1d1d1f;
+
+    /*utils*/
+    --header-height: 3rem;
+
+    /*font - family*/
+    --body-font: 'SF Pro Text', sans-serif;
+    --display-font: 'SF Pro Display', sans-serif;
+
+    /*body size*/
+    --smaller-body-size: 0.75rem;
+    /*12px*/
+    --big-body-size: 1.25rem;
+    /*20px*/
+    --bigger-body-size: 1.5rem;
+    /*24px*/
+
+    /*Title font size*/
+
+    --small-title-size: 2rem;
+    /* 32px */
+    --normal-title-size: 2.5rem;
+    /* 40px */
+    --big-title-size: 2.5rem;
+    /* 40px */
+    --bigger-title-size: 2.5rem;
+    /* 40px */
+
+
+
+    /*Weight-text-*/
+
+    --normal-font: 400;
+    --normal-font: 500;
+    --normal-font: 600;
+    --normal-font: 700;
+
+    /*Line height text */
+
+    --title-line-height: 1.15;
+    --header-border: 1px solid rgba(255, 255, 255, 0.25);
+}

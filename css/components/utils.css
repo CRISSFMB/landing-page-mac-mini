@@ -1,0 +1,21 @@
+.black-background {
+    background-color: #151516;
+}
+
+.black-background-alt {
+    background-color: #1d1d1f;
+}
+
+.display-font {
+    font-family: var(--bg-color);
+}
+
+.body-font {
+    font-family: var(--bg-color-alt);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
