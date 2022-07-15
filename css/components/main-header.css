@@ -18,6 +18,8 @@
 
 }
 
+
+
 .main-overlay.displayNone {
     display: none;
 }
@@ -49,6 +51,9 @@
 
 .main-menu .link {
     color: var(--text-color);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .main-menu .link:hover {
@@ -79,7 +84,6 @@
         /*esta transicion es cuando salga el menu*/
         transition: transform ease-in 1s;
         z-index: -1;
-
     }
 
     .main-menu .item {
@@ -171,7 +175,5 @@
 
         transition-delay: 460ms;
     }
-
-
 
 }

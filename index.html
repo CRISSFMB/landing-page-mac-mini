@@ -16,13 +16,13 @@
         <a href="#" class="title">Mac Mini</a>
         <ul id="main-menu" class="main-menu">
           <li class="item">
-            <a href="#" class="link">Descriptcion</a>
+            <a href="#Descriptcion" class="link">Descriptcion</a>
           </li>
           <li class="item">
-            <a href="#" class="link">Por que la Mac</a>
+            <a href="#why-mac" class="link">Por que la Mac</a>
           </li>
           <li class="item">
-            <a href="#" class="link">Especificaciones</a>
+            <a href="#Especifications" class="link">Especificaciones</a>
           </li>
         </ul>
         <button id="menu-button" class="menu-button"></button>
@@ -32,12 +32,94 @@
 
     <div class="main-overlay displayNone" id="main-overlay"></div>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt qui ex
-      quidem id, quibusdam odit. Necessitatibus magnam tenetur voluptatibus
-      pariatur perspiciatis cupiditate excepturi ducimus ex perferendis,
-      assumenda molestiae! Alias.
-    </p>
+    <main class="main">
+      <!-- start section banner hero -->
+      <section id="Descriptcion" class="main-hero-banner">
+        <!-- hero wrapper -->
+        <div class="hero-image-wrapper">
+          <img
+            class="hero-image-wrapper__img"
+            src="/media/img/hero-image.jpg"
+            alt="hero-image"
+          />
+          <img
+            class="hero-image-wrapper__img dark"
+            src="/media/img/hero-image-dark.jpg"
+            alt="hero-image"
+          />
+        </div>
+
+        <!-- content-text-hero -->
+
+        <div class="container wrapper-hero-text">
+          <h1 class="wrapper-hero-text__title">Mac mini</h1>
+          <h2 class="wrapper-hero-text__second-title">
+            Kleine Schale.<br />
+            Schneller Kern.
+          </h2>
+          <p class="wrapper-hero-text__description">
+            Der Apple M1 Chip bringt unseren vielseitigsten Desktop-Computer in
+            eine neue Dimension. Mit bis zu 3x schnellerer CPU Leistung. Bis zu
+            6x schnellerer Grafik. Und unserer fortschritt­lichsten Neural
+            Engine für bis zu 15x schnelleres maschinelles Lernen. Mach dich
+            bereit, auf dem Mac mini mit Geschwin­digkeit und Power zu arbeiten,
+            zu spielen und kreativ zu sein, die du dir nicht vorstellen kannst.
+          </p>
+
+          <div class="wrapper-chip">
+            <img
+              class="wrapper-chip__img"
+              src="/media/img/chip-m1.jpg"
+              alt="chip m1"
+            />
+            <p class="wrapper-chip__paragraph">
+              Mit der Power des Apple M1 Chip
+            </p>
+          </div>
+
+          <div class="wrapper-price-event">
+            <a class="wrapper-price-event__price" href="#">Ab 799$</a>
+            <a class="wrapper-price-event__anchor-event" href="#"
+              >Event ansehen</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="why-mac" class="section-placeholder container">
+        <div class="why-mac-wrapper-description">
+          <img
+            src="./media/img/m1-logo.png"
+            alt=""
+            class="why-mac-wrapper-description__img"
+          />
+          <h3 class="why-mac-wrapper-description__title">
+            Kleiner Chip.
+            <br />
+            Gigantischer Sprung.
+          </h3>
+          <p class="why-mac-wrapper-description__info">
+            Er ist da. Unser erster Chip, der speziell für den Mac entwickelt
+            wurde. Das Apple M1 System auf einem Chip (SoC) ist vollgepackt mit
+            unglaublichen 16 Milliarden Transistoren und vereint CPU, GPU,
+            Neural Engine, I/O und noch viel mehr auf einem winzigen Chip. Mit
+            unglaublicher Performance, speziellen Technologien und
+            branchen­führender Energie­effizienz1 ist der M1 nicht der nächste
+            Schritt für den Mac – er ist ein ganz neues Level.
+          </p>
+
+          <img
+            class="why-mac-wrapper-description__logo"
+            src="./media/img/chip-m1.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section id="Especifications" class="section-placeholder">
+        <h1>Especifications</h1>
+      </section>
+    </main>
+
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

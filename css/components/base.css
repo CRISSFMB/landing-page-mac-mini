@@ -2,7 +2,11 @@
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-padding-top: 3rem;
+    scroll-behavior: smooth;
+    min-width: 320px;
+}
 
 body {
     color: var(--text-color);
@@ -34,6 +38,7 @@ h5,
 h6 {
     font-family: var(--display-font);
     font-weight: var(--semi-bold-font);
+    margin: 0;
 }
 
 
@@ -41,4 +46,16 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+/*TODO: eliminar cuando ya se tenga la secciones listas 
+*/
+.section-placeholder {
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
 }

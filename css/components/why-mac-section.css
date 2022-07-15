@@ -1,0 +1,41 @@
+.why-mac-wrapper-description {
+    color: #A1A1A6;
+    max-width: 640px;
+    padding-top: 8rem;
+    margin: 0 auto;
+}
+
+.why-mac-wrapper-description__img {
+    width: 7rem;
+}
+
+.why-mac-wrapper-description__title {
+    font-size: 3rem;
+    font-family: var(--display-font);
+    font-weight: bold;
+    color: white;
+}
+
+.why-mac-wrapper-description__info {
+    font-size: 21px;
+    width: 100%;
+}
+
+.why-mac-wrapper-description__logo {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .why-mac-wrapper-description__title {
+
+        font-size: 4.1rem;
+    }
+
+    .why-mac-wrapper-description__info {
+        font-size: 24px;
+
+    }
+
+}
