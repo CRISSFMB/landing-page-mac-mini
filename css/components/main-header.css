@@ -5,12 +5,29 @@
 @media screen and (min-width: 734px) {}
 
 @media screen and (min-width: 1024px) {} */
+/* 
+.main-header  z-index 100 */
+
+.main-overlay {
+    background-color: rgba(26, 31, 26, 0.313);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100vh;
+
+}
+
+.main-overlay.displayNone {
+    display: none;
+}
 
 .main-header {
     position: sticky;
     top: 0;
     height: var(--header-height);
     border-bottom: var(--header-border);
+    z-index: 100;
 }
 
 .main-header .nav {
