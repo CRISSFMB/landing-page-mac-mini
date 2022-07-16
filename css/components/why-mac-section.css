@@ -21,11 +21,22 @@
     width: 100%;
 }
 
-.why-mac-wrapper-description__logo {
-    width: 100px;
-    margin: 0 auto;
-    display: block;
+/*video classes*/
+
+.wrapper-video {
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
 }
+
+.wrapper-video video {
+    position: absolute;
+    width: 49rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*video classes end*/
 
 @media screen and (min-width: 768px) {
     .why-mac-wrapper-description__title {
@@ -38,4 +49,30 @@
 
     }
 
+    /*video classes*/
+
+    .wrapper-video {
+        height: 30rem;
+    }
+
+    .wrapper-video video {
+        width: 55rem;
+    }
+
+
+    /*video classes end*/
+}
+
+@media screen and (min-width: 768px) {
+
+    /*video classes*/
+    .wrapper-video {
+        height: 35rem;
+    }
+
+    .wrapper-video video {
+        width: 60rem;
+    }
+
+    /*video classes end*/
 }
