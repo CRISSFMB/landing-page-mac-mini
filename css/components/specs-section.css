@@ -5,12 +5,12 @@
 /*card*/
 .card-specs {
     background-image: linear-gradient(-135deg, #c6368a 0%, #673dc2 100%);
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     padding: 2rem;
-    /*borrar higth*/
-    height: 972px;
+    overflow: hidden;
+    max-width: 976px;
 }
 
 .card-specs__title {
@@ -35,8 +35,8 @@
 }
 
 .card-specs__btn {
-    background-color: red;
-    width: 50%;
+    width: 170px;
+    height: 50px;
     padding: 5px 5px;
     display: block;
     text-align: center;
@@ -50,36 +50,67 @@
 
 .specs-wrapper-img {
     position: relative;
+    height: 300px;
 }
 
 .specs-wrapper-img img {
     position: absolute;
     height: 350px;
-    right: -30px;
-    top: 40px;
+    right: -141px;
+    top: 48px;
 }
 
 
+@media screen and (min-width: 375px) {
+    .card-specs {
+        width: 90%;
+        border-radius: 20px;
+    }
+}
 
+@media screen and (min-width: 768px) {
+    .card-specs {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .specs-wrapper-img img {
+        right: -254px;
+        top: 67px;
 
-/* <div class="card-specs">
-<div class="card-specs__description">
-    <p class="card-specs__note">CPU</p>
-    <h2 class="card-specs__title">8‑Core CPU</h2>
-    <h3 class="card-specs__subtitle">Mega Power, mini Format.</h3>
-    <p class="card-specs__description">
-    Der M1 gibt dem Mac mini unglaubliche Geschwindigkeit und Power.
-    Die 8‑Core CPU liefert eine bis zu 3x schnellere
-    Verarbei­tungs­leistung als die vorherige Generation2 – alles im
-    gleichen ikonischen quadratischen Design mit 19,7 cm
-    Seitenlänge.
-    </p>
-    <button class="card-specs__btn">
-    So definiert der M1 Geschwindigkeit neu
-    </button>
-</div>
-<div class="specs-wrapper-img">
-    <img src="" alt="" />
-</div>
-</div> */
+    }
+
+    .card-specs__description {
+        width: 80%;
+        font-size: 15px;
+        line-height: 1.4211;
+        font-weight: 600;
+        letter-spacing: .012em;
+    }
+
+    .card-specs__btn {
+        width: 200px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .card-specs {}
+
+    .specs-wrapper-img img {
+        right: -36px;
+        top: 67px;
+
+    }
+
+    .card-specs__description {
+        width: 65%;
+    }
+
+    .card-specs__btn {
+        width: 226px;
+        font-size: 10px;
+        padding: 0;
+    }
+
+}
