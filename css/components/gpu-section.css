@@ -1,0 +1,58 @@
+.gpu {
+    margin-top: 2rem;
+}
+
+
+.card {
+    position: relative;
+    padding-top: 2rem;
+}
+
+
+.wrapper-card video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+.card-list {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.card-list--bold {
+    font-size: 4rem;
+    font-weight: bold;
+    display: block;
+}
+
+.card-list-text {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-list__item {
+    margin-top: 40px;
+}
+
+/* .card__btn--gpu {
+    margin-top: 4rem;
+} */
+
+@media screen and (min-width: 768px) {
+    .card-list {
+        margin-top: 0;
+    }
+
+    .card__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

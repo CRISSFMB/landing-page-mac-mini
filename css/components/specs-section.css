@@ -1,10 +1,5 @@
-.specs-cpu-section {}
-
-
-
 /*card*/
-.card-specs {
-    background-image: linear-gradient(-135deg, #c6368a 0%, #673dc2 100%);
+.card {
     width: 100%;
     margin: 0 auto;
     border-radius: 20px 20px 0px 0px;
@@ -13,28 +8,32 @@
     max-width: 976px;
 }
 
-.card-specs__title {
+.card--cpu {
+    background-image: linear-gradient(-135deg, #c6368a 0%, #673dc2 100%);
+}
+
+.card__title {
     font-size: 3rem;
     font-weight: bold;
     color: #C48CFC;
 
 }
 
-.card-specs__subtitle {
+.card__subtitle {
     font-size: 3rem;
     font-weight: bold;
     color: white;
     line-height: 1.1;
 }
 
-.card-specs__description {
+.card__description {
     font-size: 19px;
     line-height: 1.4211;
     font-weight: 600;
     letter-spacing: .012em;
 }
 
-.card-specs__btn {
+.card__btn {
     width: 170px;
     height: 50px;
     padding: 5px 5px;
@@ -48,12 +47,12 @@
 
 }
 
-.specs-wrapper-img {
+.wrapper-img-card {
     position: relative;
     height: 300px;
 }
 
-.specs-wrapper-img img {
+.wrapper-img-card img {
     position: absolute;
     height: 350px;
     right: -141px;
@@ -62,25 +61,25 @@
 
 
 @media screen and (min-width: 375px) {
-    .card-specs {
+    .card {
         width: 90%;
         border-radius: 20px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .card-specs {
+    .card {
         display: flex;
         justify-content: space-between;
     }
 
-    .specs-wrapper-img img {
+    .wrapper-img-card img {
         right: -254px;
         top: 67px;
 
     }
 
-    .card-specs__description {
+    .card__description {
         width: 80%;
         font-size: 15px;
         line-height: 1.4211;
@@ -88,26 +87,24 @@
         letter-spacing: .012em;
     }
 
-    .card-specs__btn {
+    .card__btn {
         width: 200px;
     }
 
 }
 
 @media screen and (min-width: 1024px) {
-    .card-specs {}
-
-    .specs-wrapper-img img {
+    .wrapper-img-card img {
         right: -36px;
         top: 67px;
 
     }
 
-    .card-specs__description {
+    .card__description {
         width: 65%;
     }
 
-    .card-specs__btn {
+    .card__btn {
         width: 226px;
         font-size: 10px;
         padding: 0;
