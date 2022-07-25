@@ -2,7 +2,7 @@
     margin-top: 2rem;
 }
 
-
+/*estoys estilos siven para el video pero podemos usarlo igualmente aqui*/
 .background-container {
     position: absolute;
     left: 0;
@@ -13,8 +13,31 @@
     z-index: -100
 }
 
+
 .background-image-default-mobile {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* iluminando el panel . configurando el css y luego nos vamos al js  */
+
+#monterey :is(.card__subtitle,
+    .background-container) {
+    opacity: 0.30;
+    transition: opacity ease 2s;
+}
+
+/*esta es una opcion pero la otra es mas cool :) */
+
+/* .card__subtitle,
+.background-container {
+    opacity: 0.30;
+} */
+
+/* cuando el background containter que es mi panel tenga la clase active volveremos
+a su estado normal la imagen sin opacity */
+#monterey :is(.card__subtitle,
+    .background-container.active) {
+    opacity: 1;
 }
