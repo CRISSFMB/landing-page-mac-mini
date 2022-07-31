@@ -1,174 +1,164 @@
-/*Media query */
-
-/* @media screen and (min-width: 320px) {}
-
-@media screen and (min-width: 734px) {}
-
-@media screen and (min-width: 1024px) {} */
-/* 
-.main-header  z-index 100 */
-
-.main-overlay {
-    background-color: rgba(26, 31, 26, 0.313);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    height: 100vh;
-}
-
-.main-overlay.displayNone {
-    display: none;
-}
-
-.main-header {
-    position: sticky;
-    top: 0;
-    height: var(--header-height);
-    border-bottom: var(--header-border);
-    z-index: 100;
-}
-
 .main-header .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.main-header .title {
-    color: var(--text-color);
-    font-weight: var(--semi-bold-font);
-    text-decoration: none;
+    margin-inline: auto;
+    max-width: calc(100% - 2rem);
 }
 
 .main-menu {
-    font-size: var(--smaller-body-size);
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    padding: 0.25rem 2.5rem 1.5rem;
+    width: 100%;
+    border-bottom: var(--header-border);
+    background-color: var(--bg-color);
+
+    /*animation*/
+    /*ocultamos el contenido con translate*/
+    transform: translateY(-100%);
+    /*esta transicion es cuando salga el menu*/
+    transition: transform ease-in 1s;
+    z-index: -1;
+}
+
+.main-menu .item {
+    border-bottom: var(--header-border);
+    /*animation*/
+    /*animando los items que van llegando para abajo */
+    /*los items los subimos arriba un poco */
+    transform: translateY(-100%);
+    /*los escondemos */
+    opacity: 0;
+    /*la transicion del item*/
+    transition: transform 500ms, opacity 500ms
+}
+
+.main-menu .item:nth-last-child(1) {
+    border-bottom: none;
 }
 
 .main-menu .link {
-    color: var(--text-color);
-    margin-left: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    display: block;
+    padding-block: 0.85rem;
+    opacity: 0.9;
 }
 
-.main-menu .link:hover {
-    color: var(--accent-color-alt);
-    text-decoration: none;
+/*icon*/
+
+.main-header .menu-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.8;
 }
 
-@media screen and (max-width: 734px) {
+.main-header .menu-button:hover {
+    opacity: 1;
+}
 
+.main-header .menu-button::before,
+.main-header .menu-button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 0.75rem;
+    background-color: #fff;
+}
+
+.main-header .menu-button::before {
+    left: 45%;
+    transform: rotate(-40deg)
+}
+
+.main-header .menu-button::after {
+    right: 45%;
+    transform: rotate(40deg)
+}
+
+/*MENU ANIMATION  ACTIVADO*/
+
+.main-header .main-menu.is-active {
+    transform: none;
+    transition: 0.5s;
+}
+
+/*ITEMS ANIMATION ACTIVE*/
+
+.main-menu.is-active .item {
+    transform: initial;
+    /*volvemos a mostrar los items */
+    opacity: 1;
+    /*la transicion del item*/
+    transition: transform 500ms;
+    transition: opacity 500ms;
+}
+
+.main-menu.is-active .item:first-of-type {
+    /**/
+    transition-delay: 500ms;
+}
+
+.main-menu.is-active .item:nth-of-type(2) {
+
+    transition-delay: 480ms;
+}
+
+.main-menu.is-active .item:nth-of-type(3) {
+
+    transition-delay: 460ms;
+}
+
+
+
+@media screen and (min-width: 320px) {
+    .main-overlay {
+        background-color: rgba(26, 31, 26, 0.313);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        height: 100vh;
+    }
+
+    .main-overlay.displayNone {
+        display: none;
+    }
+
+    .main-header {
+        position: sticky;
+        top: 0;
+        height: var(--header-height);
+        border-bottom: var(--header-border);
+        z-index: 100;
+    }
 
     .main-header .nav {
-        margin-inline: auto;
-        max-width: calc(100% - 2rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-header .title {
+        color: var(--text-color);
+        font-weight: var(--semi-bold-font);
+        text-decoration: none;
     }
 
     .main-menu {
-        position: absolute;
-        top: var(--header-height);
-        left: 0;
-        padding: 0.25rem 2.5rem 1.5rem;
-        width: 100%;
-        border-bottom: var(--header-border);
-        background-color: var(--bg-color);
-
-        /*animation*/
-        /*ocultamos el contenido con translate*/
-        transform: translateY(-100%);
-        /*esta transicion es cuando salga el menu*/
-        transition: transform ease-in 1s;
-        z-index: -1;
-    }
-
-    .main-menu .item {
-        border-bottom: var(--header-border);
-        /*animation*/
-        /*animando los items que van llegando para abajo */
-        /*los items los subimos arriba un poco */
-        transform: translateY(-100%);
-        /*los escondemos */
-        opacity: 0;
-        /*la transicion del item*/
-        transition: transform 500ms, opacity 500ms
-    }
-
-    .main-menu .item:nth-last-child(1) {
-        border-bottom: none;
+        font-size: var(--smaller-body-size);
     }
 
     .main-menu .link {
-        display: block;
-        padding-block: 0.85rem;
-        opacity: 0.9;
+        color: var(--text-color);
+        margin-left: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    /*icon*/
-
-    .main-header .menu-button {
-        position: relative;
-        width: 2rem;
-        height: 2rem;
-        opacity: 0.8;
-    }
-
-    .main-header .menu-button:hover {
-        opacity: 1;
-    }
-
-    .main-header .menu-button::before,
-    .main-header .menu-button::after {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 1px;
-        width: 0.75rem;
-        background-color: #fff;
-    }
-
-    .main-header .menu-button::before {
-        left: 45%;
-        transform: rotate(-40deg)
-    }
-
-    .main-header .menu-button::after {
-        right: 45%;
-        transform: rotate(40deg)
-    }
-
-    /*MENU ANIMATION  ACTIVADO*/
-
-    .main-header .main-menu.is-active {
-        transform: none;
-        transition: 0.5s;
-    }
-
-    /*ITEMS ANIMATION ACTIVE*/
-
-    .main-menu.is-active .item {
-        transform: initial;
-        /*volvemos a mostrar los items */
-        opacity: 1;
-        /*la transicion del item*/
-        transition: transform 500ms;
-        transition: opacity 500ms;
-    }
-
-    .main-menu.is-active .item:first-of-type {
-        /**/
-        transition-delay: 500ms;
-    }
-
-    .main-menu.is-active .item:nth-of-type(2) {
-
-        transition-delay: 480ms;
-    }
-
-    .main-menu.is-active .item:nth-of-type(3) {
-
-        transition-delay: 460ms;
+    .main-menu .link:hover {
+        color: var(--accent-color-alt);
+        text-decoration: none;
     }
 
 }
